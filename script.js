@@ -15,6 +15,17 @@ function operate(a, b, op){
     case '-': 
       result = a - b;
       break;
+    case '*':
+      result = a * b;
+      break;
+    case '/':
+      if (b==0){
+        clearAll();
+        currentScreen.textContent = "Math Error";
+        return;
+      }
+      else result = a / b;
+      break;
   }
   roundedResult = Math.round(result*10e9)/10e9; // Fix the number of decimal places;
   currentScreen.textContent = roundedResult;
@@ -96,16 +107,25 @@ function eraseDigit(){
   else currentScreen.textContent = currentScreen.textContent.slice(0, -1);
 }
 
-const b1 = document.querySelector(".one");
-const b2 = document.querySelector(".two");
-b1.addEventListener("click", () => inputNumber(1));
-b2.addEventListener("click", () => inputNumber(2));
+let numericButtonsNodes = document.querySelectorAll(".numeric"); //Node List
+let numericButtons = [];
+numericButtonsNodes.forEach((button) => {
+  numericButtons.push(button);
+});
+
+numericButtons.forEach(button => {
+  button.addEventListener("click", () => inputNumber(button.textContent));
+});
 
 const addBtn = document.querySelector(".plus");
 const subBtn = document.querySelector(".minus");
+const mulBtn = document.querySelector(".times");
+const divBtn = document.querySelector(".divide");
 
 addBtn.addEventListener("click", () => inputOperator("+"));
 subBtn.addEventListener("click", () => inputOperator("-"));
+mulBtn.addEventListener("click", () => inputOperator("*"));
+divBtn.addEventListener("click", () => inputOperator("/"));
 
 const equalBtn = document.querySelector(".equal");
 equalBtn.addEventListener("click", () => inputEqual());
