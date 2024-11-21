@@ -1,2 +1,2 @@
-# calculator
-A calculator with basic arithmetic operations built using HTML, CSS and JavaScript. 
+# Calculator
+A calculator with basic arithmetic operations built using HTML, CSS and JavaScript, developed as my final project for the Foundations Course from [The Odin Project](https://www.theodinproject.com). Unusually, it was requested for this calculator to be designed to evaluate only one pair of numbers at a time, instead of solving entire expressions with multiple operands or parentheses. To handle full mathematical expressions, I could have implemented the Shunting-yard algorithm, as demonstrated in [this project](https://github.com/orewaugusto/expression-solver).

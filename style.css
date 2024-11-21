@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.5);
   
 }
 
