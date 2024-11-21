@@ -1,0 +1,39 @@
+/* * {
+  border: 2px solid red;
+} */
+
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border: none;  
+  outline: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.equal {
+  width: 100px;
+  border-radius: 2.5rem;
+}
+
+footer {
+  text-align: center;
+  color:#1F2937;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  padding: 20px;
+  margin: 0;
+}
