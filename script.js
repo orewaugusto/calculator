@@ -91,7 +91,7 @@ function inputPercentage(){
 }
 
 function clearAll(){
-  previousScreen.textContent = "[ ]";
+  previousScreen.textContent = '\u00A0';
   currentScreen.textContent = "0";
   firstOperand = null;
   secondOperand = null;
